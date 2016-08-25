@@ -1,4 +1,7 @@
 node {
     echo 'Hello from Pipeline'
-    echo "Aloha!"
+    timeout(time:5, unit:'DAYS') {
+        input message:'Approve deployment?', submitter: 'it-ops'
+    }
+    echo "Deploy!"
 }
