@@ -1,20 +1,13 @@
-stage 'checkout' {
-    node {
+node {
+    stage 'checkout' {
         echo 'Checkout master code'
     }
-}
-stage 'prepare source' {
-    node {
+    stage 'prepare source' {
         echo "Prepare source code"
     }
 }
-stage 'build' {
-    node {
-        echo "build some stuff"
-    }
-}
-stage 'test' {
-    node {
+node {
+    stage 'test' {
         echo "test the stuff we just built"
     }
 }
