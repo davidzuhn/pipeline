@@ -9,10 +9,8 @@ node {
     echo "Create a repo"
     echo "Copy .deb files to repo"
     parallel 'build-ova':{
-      stage "build OVA"
       echo "build the OVA"
     }, 'make-updater':{
-      stage "make updater"
       echo "create the update bundle"
     }
 
