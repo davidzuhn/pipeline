@@ -8,6 +8,7 @@ node {
     stage "Create Artifactory repository"
     echo "Create a repo"
     echo "Copy .deb files to repo"
+    stage 'Build deliverable artifacts'
     parallel 'build-ova':{
       echo "build the OVA"
     }, 'make-updater':{
