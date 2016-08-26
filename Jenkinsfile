@@ -2,6 +2,7 @@ node {
     stage 'checkout' 
     def buildId = "12345"
     echo "Checkout master code <<< $buildId >>>"
+    echo "Current build is <<< $currentBuild >>>"
     stage 'prepare source' 
     echo "Prepare source code"
     stage 'build packages'
